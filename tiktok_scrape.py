@@ -254,11 +254,86 @@ def scrape_tiktok(tiktok_username):
 
                                                             
     influencer_object["total_content"] = total_content    
-    influencer_object["last_contents"] = last_content_stats                    
+   
+    influencer_object["last_contents"] = last_content_stats 
+    popularity_score = calculate_popularity(influencer_object)
+    influencer_object["popularity_score"] = popularity_score  
+    follower_engagement = calculate_engagement_followers(influencer_object)    
+    influencer_object["follower_engagement"] = follower_engagement  
+              
+       
     print(influencer_object)
 
     driver.quit()
 
+def calculate_engagement_followers(inf_object):
+
+    if inf_object["followers"].endswith("K"):
+        total_followers = float(inf_object["followers"][:-1])*1000
+    elif content["likes"].endswith("M"):
+        total_followers = float(inf_object["followers"][:-1])*1000000
+    else:
+        total_followers = int(inf_object["followers"])
+    
+    total_likes = 0
+
+    for content in inf_object["last_contents"]:
+        if content["likes"].endswith("K"):
+            likes = float(content["likes"][:-1])*1000
+        elif content["likes"].endswith("M"):
+            likes = float(content["likes"][:-1])*1000000
+        else:
+            likes = int(content["likes"])
+
+        total_likes += likes
+
+    follower_engagement = (total_likes/total_followers)*100
+    return follower_engagement
 
 
-scrape_tiktok("sudealkis")
+
+def calculate_popularity(inf_object):  
+
+    total_likes = 0
+    total_comments = 0
+    total_watched = 0
+
+    for content in inf_object["last_contents"]:
+        if content["likes"].endswith("K"):
+            likes = float(content["likes"][:-1])*1000
+        elif content["likes"].endswith("M"):
+            likes = float(content["likes"][:-1])*1000000
+        else:
+            likes = int(content["likes"])
+
+        total_likes += likes
+
+    for content in inf_object["last_contents"]:
+        if content["times_watched"].endswith("K"):
+            tw = float(content["times_watched"][:-1])*1000
+        elif content["times_watched"].endswith("M"):
+            tw = float(content["times_watched"][:-1])*1000000
+        else:
+            tw = int(content["times_watched"])
+
+        total_watched += tw
+    
+    for content in inf_object["last_contents"]:
+        if content["comments"].endswith("K"):
+            comments = float(content["comments"][:-1])*1000
+        elif content["comments"].endswith("M"):
+            comments = float(content["comments"][:-1])*1000000
+        else:
+            comments = int(content["comments"])  
+        
+        total_comments += comments
+
+
+
+    total_engagement = total_likes + total_comments
+    popularity_score = (total_engagement/int(total_watched))*100
+
+    return popularity_score
+
+
+scrape_tiktok("ferhatcelil_")

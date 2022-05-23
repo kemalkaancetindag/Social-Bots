@@ -121,7 +121,7 @@ def scrape_twitch(twitch_username):
 
 
     driver.get(f"https://www.twitch.tv/{twitch_username}")
-    time.sleep(2)
+    time.sleep(3)
     try:
         username = driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[2]/div[1]/main/div[2]/div[3]/div/div/div[1]/div[1]/div[2]/div/div[2]/div[1]/div[1]/div[2]/a/div/h1").get_attribute("innerHTML")
         user_image = driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[2]/div[1]/main/div[2]/div[3]/div/div/div[1]/div[1]/div[2]/div/div[2]/div[1]/div[1]/div[1]/div/div/div/a/div/figure/img").get_attribute("src")
@@ -130,6 +130,7 @@ def scrape_twitch(twitch_username):
         username = driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[2]/div[1]/main/div[2]/div[3]/div/div/div[1]/div[1]/div[2]/div/div[1]/div/div/div/div[2]/div[1]/div[1]/a/h1").get_attribute("innerHTML")
         user_image = driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[2]/div[1]/main/div[2]/div[3]/div/div/div[1]/div[1]/div[2]/div/div[1]/div/div/div/div[1]/div/div/div/a/div[1]/figure/img").get_attribute("src")
         followers = driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[2]/div[1]/main/div[2]/div[3]/div/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div/span/div/div/span").get_attribute("innerHTML").split(" ")[0]
+
 
     recent_category_list = list()
 
@@ -171,4 +172,4 @@ def scrape_twitch(twitch_username):
 
 
 
-scrape_twitch("elraenn")
+scrape_twitch("wtcn")
