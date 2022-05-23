@@ -161,6 +161,8 @@ def scrape_twitch(twitch_username):
     influencer_object["recent_broadcasts"] = recent_broadcast_stat_list
     influencer_object["popular_clips"] = popular_clips_stat_list
     influencer_object["recent_categories"] = recent_category_list
+    engagement_score = calculate_engagement_followers(influencer_object)
+    influencer_object["engagement_score"] = engagement_score
 
                     
     print(influencer_object)    
@@ -170,6 +172,30 @@ def scrape_twitch(twitch_username):
 
 
 
+def calculate_engagement_followers(inf_object):
+
+    total_views = 0
+
+    
+    if inf_object["followers"].endswith("K"):
+        total_followers = float(inf_object["followers"][:-1])*1000
+    elif inf_object["followers"].endswith("M"):
+        total_followers = float(inf_object["followers"][:-1])*1000000
+    else:
+        total_followers = int(inf_object["followers"])
+
+    for broad_cast in inf_object["recent_broadcasts"]:
+        if broad_cast["views"].endswith("K"):
+            view = float(broad_cast["views"][:-1])*1000
+        elif broad_cast["views"].endswith("M"):
+            view = float(broad_cast["views"][:-1])*1000000
+        else:
+            view = int(broad_cast["views"])  
+
+        total_views += view              
+
+    follower_engagement = (total_views/total_followers)*100
+    return follower_engagement
 
 
 scrape_twitch("wtcn")
