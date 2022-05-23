@@ -2,8 +2,10 @@ import requests
 
 
 def get_channel_id(channel_name):
-    response = requests.get(f"https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={channel_name}&key=AIzaSyAAURNtiniht-v-_2QK3s8IahFtonX1joo")
-    if response.status_code == 200:        
+    response = requests.get(f"https://yt.lemnoslife.com/channels?part=snippet&forUsername={channel_name}")
+    #response = requests.get(f"https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={channel_name}&key=AIzaSyAAURNtiniht-v-_2QK3s8IahFtonX1joo")
+    if response.status_code == 200:     
+        print(response.json())   
         if len(response.json()["items"]) > 0:
             return response.json()["items"][0]["id"]
 
@@ -63,9 +65,10 @@ def calculate_popularity(video_stats,total_impression):
 
     return popularity_score
 
-        
 
-channel_id = get_channel_id("newdaynewgame")
+
+
+channel_id = get_channel_id("BBNturk")
 
 video_ids = get_last_10_videos(channel_id)
 
