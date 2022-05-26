@@ -1,92 +1,57 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.firefox.options import Options
-from bs4 import BeautifulSoup
-import time
+import requests
+
+
+def get_user_id(screen_name):
+    headers = {'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAKAMdAEAAAAAydUJyT8uFaFEUxvvWGXm76T1ltY%3DQuPvsmPR5eQtLmULFg6j5BhERn1Es1PDYt1UtR8vfDuGh7ihWz'}
+    response = requests.get(f"https://api.twitter.com/1.1/users/show.json?screen_name={screen_name}", headers=headers)    
+    if response.status_code == 200:
+        user_id = response.json()["id"]
+        followers = response.json()["followers_count"]
+        banner_image = response.json()["profile_banner_url"]
+        profile_image = response.json()["profile_image_url"]
+        name = response.json()["name"]
+
+        influencer_object = {"user_id":user_id,"name":name,"followers":followers, "banner_image":banner_image, "profile_image":profile_image}
+
+        return influencer_object
 
 
 
-
-options = Options()
-options.headless = False
-fp = webdriver.FirefoxProfile("C:/Users/Kaan/AppData/Roaming/Mozilla/Firefox/Profiles/lk2eo77a.Test Profile")
-driver = webdriver.Firefox(options=options, executable_path=r'C:\Users\Kaan\Desktop\geckodriver.exe',firefox_profile=fp)
-driver.set_window_position(0, 0)
-driver.set_window_size(1920, 1080)
-driver.get(f"https://twitter.com/grahamlicc") 
-time.sleep(5)
-
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-time.sleep(3)
-driver.execute_script("window.scrollTo(0, 50);")
-
-
-reply_count = 0
-tweet_count = 1
-while True:
-    try:
-        tweet = driver.find_element(by=By.XPATH, value=f"/html/body/div[1]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/section/div/div/div[{tweet_count}]")        
-        try:
-            reply = tweet.find_element(by=By.XPATH, value=f"./div/div/div/article/div/div/div/div[2]/div[2]/div[2]/div[3]/div/div[1]/div/div/div[2]/span/span/span").get_attribute("innerHTML")
-            retweet = tweet.find_element(by=By.XPATH, value=f"./div/div/div/article/div/div/div/div[2]/div[2]/div[2]/div[3]/div/div[2]/div/div/div[2]/span/span/span").get_attribute("innerHTML")                                                                    
-            print(reply)
-            print(retweet)
-            print("----------")
-            reply_count += 1
-        except:
-            try:
-                try:
-                    reply = tweet.find_element(by=By.XPATH, value=f"./div/div/div/article/div/div/div/div[2]/div[2]/div[2]/div[2]/div/div[1]/div/div/div[2]/span/span/span").get_attribute("innetHTML")
-                    retweet = tweet.find_element(by=By.XPATH, value=f"./div/div/div/article/div/div/div/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[2]/span/span/span").get_attribute("innerHTML")                                
-                except:
-                    driver.execute_script("window.scrollTo(0, (document.body.scrollHeight/15));")
-                    
-
-                print(reply)
-                print(retweet)
-                print("----------")
-                reply_count += 1    
-            except:
-                print("hata")
-                print(tweet_count)
-                print("----------")
-    except:
-        print("tweet not found")
-            
-        
-
-        
+def get_user_tweets(user_id):
     
+    headers = {'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAKAMdAEAAAAAydUJyT8uFaFEUxvvWGXm76T1ltY%3DQuPvsmPR5eQtLmULFg6j5BhERn1Es1PDYt1UtR8vfDuGh7ihWz'}
+    response = requests.get(f"https://api.twitter.com/2/users/{user_id}/tweets?tweet.fields=public_metrics", headers=headers)
     
-    
-    tweet_count += 1
+    if response.status_code == 200:
+        tweet_data = response.json()["data"]        
+        return tweet_data
 
-    if tweet_count == 5:
-        
-        time.sleep(2)
-    if reply_count == 10:
-        break
 
-print(tweet_count)
-    
-    
-    
-    
-    
-    
-    
-        
-    
-    
+def calculate_engagement_score(tweet_data, total_followers):
+    total_replies = 0
+    total_likes = 0
+    for data in tweet_data:
+        total_replies += data["public_metrics"]["reply_count"]
+        total_likes += data["public_metrics"]["like_count"]
+
+    engagement_score = (((total_replies+total_likes)/total_followers)*100)
+    return engagement_score
 
 
 
+def final_influencer_object(screen_name):
+    influencer_object = get_user_id(screen_name)
+
+    tweet_data = get_user_tweets(influencer_object["user_id"])
 
 
+    engagement_score = calculate_engagement_score(tweet_data, influencer_object["followers"])
 
+    influencer_object["last_tweets"] = tweet_data
+    influencer_object["engagement_score"] = engagement_score
 
+    return influencer_object
 
-
-
+inf_object = final_influencer_object("grahamlicc")
+print(inf_object)
 
