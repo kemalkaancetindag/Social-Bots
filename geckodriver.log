@@ -3723,3 +3723,114 @@ Read port: 59223
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1653566838571	geckodriver	INFO	Listening on 127.0.0.1:51378
+1653566841655	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "51379" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Kaan\\AppData\\Local\\Temp\\rust_mozprofile33BDdT"
+*** You are running in headless mode.
+1653566841939	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Kaan\\AppData\\Local\\Temp\\rust_mozprofile33BDdT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51379/devtools/browser/f1fafb20-28ca-457d-8e3d-f8afa2b8a7da
+1653566842673	Marionette	INFO	Listening on port 51400
+Read port: 51400
+1653566842762	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653566866805	Marionette	INFO	Stopped listening on port 51400
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653567029261	geckodriver	INFO	Listening on 127.0.0.1:58479
+1653567032325	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "58480" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Kaan\\AppData\\Local\\Temp\\rust_mozprofileUqqpH1"
+*** You are running in headless mode.
+1653567032580	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Kaan\\AppData\\Local\\Temp\\rust_mozprofileUqqpH1\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58480/devtools/browser/53ef2c8b-8c07-4896-a643-4ecc07a963b1
+1653567033360	Marionette	INFO	Listening on port 58498
+Read port: 58498
+1653567033437	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e7187e3350 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e71ad35230 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://lf16-tiktok-web.ttwstatic.com/obj/tiktok-web/tiktok/webapp/main/webapp-desktop/7640.3d83c762fe77c00e7d43.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: 
+JavaScript warning: https://lf16-tiktok-web.ttwstatic.com/obj/tiktok-web/tiktok/webapp/main/webapp-desktop/webapp-desktop.42579ad3d2f6132cbb7b.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: 
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e71fadc010 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e71edf3240 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e71fa40130 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e71eac5f00 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e7217f3680 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e71fa40f00 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e71fa41bc0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/media/PeerConnection.jsm, line 1732: TypeError: this._pc is undefined
+JavaScript warning: https://sf16-secsdk.ttwstatic.com/obj/rc-web-sdk-gcs/webmssdk/1.0.0.260/webmssdk.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 13732, MediaDecoderStateMachine #1] WARNING: 1e71eac6340 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript warning: https://s20.tiktokcdn.com/tiktok/common/init.js?seed=AADmPACBAQAA6KRTJZHyS4r0nPnEFFtNT___GzBd38q_7hWiQ73cfs37iE-t&hTc6j8Njvn--z=q, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653567111207	Marionette	INFO	Stopped listening on port 58498
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

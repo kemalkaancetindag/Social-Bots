@@ -163,6 +163,8 @@ def scrape_twitch(twitch_username):
     influencer_object["recent_categories"] = recent_category_list
     engagement_score = calculate_engagement_followers(influencer_object)
     influencer_object["engagement_score"] = engagement_score
+    influencer_object["impression_score"] = None
+
 
                     
     print(influencer_object)    

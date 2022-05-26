@@ -53,7 +53,7 @@ def calculate_engagement_followers(video_stats, total_subs):
     follower_engagement = (total_likes/int(total_subs))*100
     return follower_engagement
 
-def calculate_popularity(video_stats,total_impression):
+def calculate_impression(video_stats,total_impression):
     total_likes = 0
     total_comments = 0
     for stat in video_stats:
@@ -68,27 +68,33 @@ def calculate_popularity(video_stats,total_impression):
 
 
 
-channel_id = get_channel_id("BBNturk")
+def final_influencer_object(channel_name):
 
-video_ids = get_last_10_videos(channel_id)
+    channel_id = get_channel_id(channel_name)
 
-channel_stats, title = get_channel_stats(channel_id)
+    video_ids = get_last_10_videos(channel_id)
 
-video_stats = get_last_videos_stats(video_ids)
+    channel_stats, title = get_channel_stats(channel_id)
 
-engagement_score = calculate_engagement_followers(video_stats, channel_stats["subscriberCount"])
-popularity_score = calculate_popularity(video_stats,channel_stats["viewCount"])
+    video_stats = get_last_videos_stats(video_ids)
 
-influencer_object = {}
+    engagement_score = calculate_engagement_followers(video_stats, channel_stats["subscriberCount"])
+    impression_score = calculate_impression(video_stats,channel_stats["viewCount"])
 
-influencer_object["title"] = title
-influencer_object["channel_id"] = channel_id
-influencer_object["interraction_result"] = engagement_score
-influencer_object["popularity_result"] = popularity_score
-influencer_object["channel_stats"] = channel_stats
-influencer_object["last_videos"] = video_stats
+    influencer_object = {}
 
-print(influencer_object)
+    influencer_object["title"] = title
+    influencer_object["channel_id"] = channel_id
+    influencer_object["engagement_score"] = engagement_score
+    influencer_object["impression_score"] = impression_score
+    influencer_object["channel_stats"] = channel_stats
+    influencer_object["last_videos"] = video_stats
+
+    return influencer_object
+
+inf_object = final_influencer_object("BBNTurk")
+
+print(inf_object)
 
 
 

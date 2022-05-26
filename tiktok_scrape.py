@@ -256,17 +256,17 @@ def scrape_tiktok(tiktok_username):
     influencer_object["total_content"] = total_content    
    
     influencer_object["last_contents"] = last_content_stats 
-    popularity_score = calculate_popularity(influencer_object)
-    influencer_object["popularity_score"] = popularity_score  
-    follower_engagement = calculate_engagement_followers(influencer_object)    
-    influencer_object["follower_engagement"] = follower_engagement  
+    popularity_score = calculate_impression(influencer_object)
+    influencer_object["impression_score"] = popularity_score  
+    follower_engagement = calculate_engagement(influencer_object)    
+    influencer_object["engagement_score"] = follower_engagement  
               
        
     print(influencer_object)
 
     driver.quit()
 
-def calculate_engagement_followers(inf_object):
+def calculate_engagement(inf_object):
 
     if inf_object["followers"].endswith("K"):
         total_followers = float(inf_object["followers"][:-1])*1000
@@ -292,7 +292,7 @@ def calculate_engagement_followers(inf_object):
 
 
 
-def calculate_popularity(inf_object):  
+def calculate_impression(inf_object):  
 
     total_likes = 0
     total_comments = 0
